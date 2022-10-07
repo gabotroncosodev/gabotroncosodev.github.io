@@ -1,0 +1,15 @@
+//COLORS
+
+$colors: (
+    primary: #0f44d6,
+    secondary: #d6720f,
+    white: #ffffff,
+    black: #000
+);
+
+:root{
+    --primary-color: #{map-get($colors , primary )};    
+    --secondary-color: #{map-get($colors , secondary )};    
+    --white: #{map-get($colors , white )};    
+}
+
