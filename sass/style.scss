@@ -1,18 +1,7 @@
-@use 'reset';
 @use 'variables';
+@use 'reset';
+@use 'header';
 @use 'main';
 //npm install -g sass
 //npm sass --save-dev
-body{
-    background-color: #eaeaea;
-}
 
-#profile-photo{
-    width: 150px;
-    height: 150px;
-}
-#profile-photo img{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}

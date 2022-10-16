@@ -1,31 +1,23 @@
+:root {
+  --primary-color: #0f44d6;
+  --secondary-color: #d6720f;
+  --white: #ffffff;
+  --bg-color:#2c2c2c;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-:root {
-  --primary-color: #0f44d6;
-  --secondary-color: #d6720f;
-  --white: #ffffff;
-}
-
-main {
-  display: grid;
-  grid-template-columns: 250px 1fr;
-  height: 100vh;
-}
-
-/* .main-menu{    
-    background-color: var(--secondary-color);
-}
-
-.main-container{    
-    background-color: var(--primary-color);
-}
- */
 body {
-  background-color: #eaeaea;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  position: relative;
+  color: var(--white);
+  height: 100vh;
+  background-color: rgb(11, 11, 11);
 }
 
 #profile-photo {
@@ -36,7 +28,30 @@ body {
 #profile-photo img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
+
+header {
+  background-color: var(--bg-color);
+  position: relative;
+}
+header .header-container {
+  position: sticky;
+  padding: 0 5px;
+}
+
+main {
+  background: url(https://www.pixelstalk.net/wp-content/uploads/images6/Star-Wars-Space-Background-Free-Download.jpg);
+  background-size: contain;
+}
+
+/* .main-menu{    
+    background-color: var(--secondary-color);
+}
+
+.main-container{    
+    background-color: var(--primary-color);
+}
+ */
 
 /*# sourceMappingURL=style.css.map */

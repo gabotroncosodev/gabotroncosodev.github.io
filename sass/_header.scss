@@ -1,0 +1,9 @@
+header{
+    background-color: var(--bg-color);
+    position: sticky;
+    height: max-content;
+    top: 5.4rem;
+    .header-container{
+        padding: 0 5px;
+    } 
+}

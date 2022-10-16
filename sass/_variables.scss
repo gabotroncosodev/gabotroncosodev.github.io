@@ -10,6 +10,7 @@ $colors: (
 :root{
     --primary-color: #{map-get($colors , primary )};    
     --secondary-color: #{map-get($colors , secondary )};    
-    --white: #{map-get($colors , white )};    
+    --white: #{map-get($colors , white )};  
+    --bg-color:#2c2c2c;  
 }
 
