@@ -1,7 +1,6 @@
 @use 'variables';
-@use 'reset';
+@use 'general';
 @use 'header';
 @use 'main';
-//npm install -g sass
-//npm sass --save-dev
-
+@use 'aside';
+@use 'sections';
