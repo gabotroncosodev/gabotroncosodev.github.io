@@ -1,16 +1,21 @@
 //COLORS
 
 $colors: (
-    primary: #0f44d6,
+    primary: #0094FF,
     secondary: #d6720f,
     white: #ffffff,
-    black: #000
+    white-one:#E1E1E1,
+    black: #000,
+    black-one:#181818,
+    black-two: #1D1D1D,
+    black-three:#292929,
 );
 
 :root{
     --primary-color: #{map-get($colors , primary )};    
     --secondary-color: #{map-get($colors , secondary )};    
     --white: #{map-get($colors , white )};  
-    --bg-color:#2c2c2c;  
+    --bg-color-general: #{map-get($colors, black-one)}; 
+     
 }
 

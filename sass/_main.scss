@@ -1,6 +1,8 @@
 main{
-    background: url(https://www.pixelstalk.net/wp-content/uploads/images6/Star-Wars-Space-Background-Free-Download.jpg);
-    background-size: contain;
+    // background: url(https://www.pixelstalk.net/wp-content/uploads/images6/Star-Wars-Space-Background-Free-Download.jpg);
+    // background-size: contain;    
+    display: grid;
+    grid-template-columns: 300px 1fr;
 }
 
 

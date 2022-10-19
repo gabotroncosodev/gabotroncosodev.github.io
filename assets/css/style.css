@@ -1,8 +1,8 @@
 :root {
-  --primary-color: #0f44d6;
+  --primary-color: #0094FF;
   --secondary-color: #d6720f;
   --white: #ffffff;
-  --bg-color:#2c2c2c;
+  --bg-color-general: #181818;
 }
 
 * {
@@ -14,30 +14,76 @@
 }
 
 body {
-  display: grid;
-  grid-template-columns: 350px 1fr;
   color: var(--white);
   height: max-content;
-  background-color: rgb(11, 11, 11);
+  background-color: var(--bg-color-general);
+  font-family: "Roboto", sans-serif;
   position: relative;
 }
 
-/*!Borrar
-*/
 img {
-  width: 100%;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  filter: grayscale(1);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-color);
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
 }
 
 header {
   background-color: var(--bg-color);
-  position: sticky;
-  top: 0;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header .cont-profile-header {
+  display: flex;
+  gap: 1.5rem;
+}
+header .cont-profile-header .profile-text-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+header .navbar-header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 3rem;
+}
+header .navbar-header ul {
+  display: flex;
+  gap: 3rem;
+  font-size: 1.5rem;
+}
+header .navbar-header ul li {
+  list-style: none;
+}
+header .navbar-header ul li:hover {
+  color: red;
+  transition: 0.8s;
+}
+header .navbar-header ul a:hover {
+  color: var(--primary-color);
+  transition: 0.2s;
 }
 
 main {
-  background: url(https://www.pixelstalk.net/wp-content/uploads/images6/Star-Wars-Space-Background-Free-Download.jpg);
-  background-size: contain;
+  display: grid;
+  grid-template-columns: 300px 1fr;
 }
 
 /* .main-menu{    
@@ -48,5 +94,21 @@ main {
     background-color: var(--primary-color);
 }
  */
+.aside {
+  background-color: var(--secondary-color);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(37, 37, 37);
+}
+.aside .aside-container {
+  top: 0;
+  position: sticky;
+}
+
+section {
+  min-height: 100vh;
+  background-color: rgb(47, 47, 47);
+}
 
 /*# sourceMappingURL=style.css.map */
