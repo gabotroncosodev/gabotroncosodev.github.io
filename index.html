@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
     <title>Gabriel Troncoso - Front End Dev Trainee</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d5c24c2a1e.js" crossorigin="anonymous"></script>
+    icon
 </head>
 <body>
     <header class="header" id="header">
@@ -18,22 +20,23 @@
                 <img src="./assets/img/perfil.jpg" alt="profile photo">
             </div>
             <div class="profile-text-header">
-                <h1>Gabriel Troncoso</h1>
-                <p><b>Front End Developer Trainee</b><br>
+                <h1>Gabriel Troncoso Castro</h1>
+                <p>Front End Developer Trainee<br>
                 Diplomado en Desarrollo Web<br>
-                TNS en Computación e Informática</p>
+                T.N.S. en Computación e Informática</p>
             </div>
        </div>   
        <nav class="navbar-header">
             <ul>
                 <li><a href="#about-me"><i class="fa-solid fa-user"></i> Sobre Mí</a></li>
                 <li><a href="#portfolio"><i class="fa-sharp fa-solid fa-folder-open"></i> Portafolio</a></li>
-                <li><a href="#contact"> <i class="fa-sharp fa-solid fa-address-card"></i> Contacto</a></li>
-                <li><i class="fa-regular fa-lightbulb"></i> Light/Dark
-                    <!-- <input type="checkbox" name="" id=""> -->
-                </li>
+                <li><a href="#contact"> <i class="fa-sharp fa-solid fa-address-card"></i> Contacto</a></li>                
             </ul>
-       </nav>     
+       </nav>  
+       <div class="light-dark">
+            <p>Light/Dark</p>
+            <!-- agregar boton toggle -->
+       </div>
     </header>
     <main>
         <aside class="aside">
@@ -43,23 +46,21 @@
                     <img src="./assets/img/perfil.jpg" alt="profile photo">
                 </div> 
                 <h3>Gabriel Troncoso Castro</h3>
-                <p>Front End Developer Trainee<br>
+                <p class="txt-study">Front End Developer Trainee<br>
                     Diplomado en Desarrollo Web<br>
                     TNS en Computación e Informática</p>
-                <span class="line-aside"></span>
                 <nav class="navbar-aside">
                     <ul>
                         <li><a href="#header"><i class="fa-solid fa-house"></i>home</a> </li>
-                        <li><a href="#about-me"><i class="fa-solid fa-house"></i>Sobre Mi</a> </li>
-                        <li><a href="#portfolio"><i class="fa-solid fa-house"></i>Portafolio</a> </li>
-                        <li><a href="#contact"><i class="fa-solid fa-house"></i>Contacto</a> </li>
+                        <li><a href="#about-me"><i class="fa-solid fa-user"></i></i>Sobre Mi</a> </li>
+                        <li><a href="#portfolio"><i class="fa-solid fa-folder-open"></i>Portafolio</a> </li>
+                        <li><a href="#contact"><i class="fa-sharp fa-solid fa-address-card"></i>Contacto</a> </li>
                     </ul>
                 </nav>
-                <span class="line-aside"></span>
-                <div class="cont-lightdark-opt">
-                    <p class="f-light"></p>
-                    <input type="checkbox"> 
-                </div>
+                <div class="light-dark">
+                    <p>Light/Dark</p>
+                    <!-- agregar boton toggle -->
+               </div>
             </div>
 
         </aside>
@@ -71,7 +72,11 @@
                 <h4>Habilidades y Conocimientos</h4>
                 <div class="cont-habilities">
                     <div class="logo-hability html-logo">
-                        <i class="fa-brands fa-html5"></i>
+                        <svg width="45" height="59" viewBox="0 0 45 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.48834 0H8.14826V2.62796H10.582V0H13.2419V7.95517H10.582V5.29279H8.14826V7.95517H5.4908V0H5.48834ZM16.7377 2.63779H14.3973V0H21.7404V2.63779H19.3976V7.95517H16.7377V2.63779ZM22.9056 0H25.6786L27.3847 2.79512L29.0883 0H31.8613V7.95517H29.2137V4.012L27.3847 6.84154H27.338L25.5065 4.01446V7.95517H22.9056V0ZM33.1839 0H35.8463V5.32721H39.583V7.95762H33.1839V0Z" fill="white"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.40475 54.2603L0.375 11.596H44.625L39.5928 54.2554L22.4754 59L5.40475 54.2603ZM15.5749 30.9062L15.098 25.547H35.1211L35.5882 20.3157H9.38233L10.7934 36.14H28.9285L28.3213 42.925L22.4853 44.5032H22.4803L16.6541 42.9299L16.2804 38.7581H11.0245L11.7571 46.9738L22.4754 49.9484L33.211 46.9738L34.5188 32.3123L34.6466 30.9086H15.5749V30.9062Z" fill="white"/>
+                            </svg>
+                            
                     </div>
                     <div class="logo-hability html-logo">
                         <i class="fa-brands fa-css3-alt"></i>

@@ -53,7 +53,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 4.5rem;
 }
 
 h2 {
@@ -65,7 +65,7 @@ h2 {
 h3 {
   font-size: 2rem;
   font-weight: 700;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 h4 {
@@ -90,6 +90,22 @@ nav ul {
   list-style: none;
 }
 
+/***********FA*/
+i {
+  padding-right: 1rem;
+}
+
+/***********/
+p::selection {
+  background: var(--secondary-color);
+}
+
+/************Caja contenedor */
+.light-dark {
+  color: var(--black-four);
+  font-weight: 100;
+}
+
 header {
   background-color: var(--bg-color);
   height: 100vh;
@@ -109,32 +125,32 @@ header .cont-profile-header .profile-text-header {
 }
 header .cont-profile-header .profile-text-header p {
   font-size: 1.5rem;
+  font-weight: 200;
+}
+header .cont-profile-header .profile-text-header p::first-line {
+  font-weight: 800;
+  font-size: 1.8rem;
 }
 header .navbar-header {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  padding-top: 3rem;
+  position: relative;
 }
 header .navbar-header ul {
   display: flex;
-  gap: 0.5rem;
-  font-size: 1.3rem;
+  padding: 1rem 0;
 }
 header .navbar-header ul li {
-  list-style: none;
-}
-header .navbar-header ul li:hover {
-  color: red;
-  transition: 0.8s;
+  font-size: 1.4rem;
 }
 header .navbar-header ul li a {
-  padding: 2.2rem 3rem;
+  padding: 1.5rem 3rem;
+  display: block;
 }
 header .navbar-header ul li a:hover {
-  background-color: var(--bg-black-one);
-  color: var(--secondary-color);
-  transition: 0.3s;
+  background-color: var(--secondary-color);
+}
+header .light-dark {
+  color: var(--black-four);
+  font-weight: 100;
 }
 
 main {
@@ -158,23 +174,53 @@ main {
   align-items: center;
   padding: 4rem 0;
 }
+.aside .aside-container .profile-photo {
+  width: 100%;
+}
 .aside .aside-container .profile-photo img {
-  width: 300px;
+  width: 100%;
   height: 350px;
   object-fit: cover;
   filter: grayscale(1);
 }
-.aside .aside-container .line-aside {
+.aside .aside-container .txt-study {
+  text-align: center;
+  font-weight: 100;
+}
+.aside .aside-container .txt-study::first-line {
+  font-weight: 700;
+}
+.aside .aside-container .navbar-aside {
+  margin: 1.3rem 0;
+  width: 100%;
+  position: relative;
+}
+.aside .aside-container .navbar-aside::after, .aside .aside-container .navbar-aside::before {
+  content: "";
   height: 0.2rem;
   width: 100%;
   background-color: var(--bg-black-three);
-  margin: 2rem 0;
+  position: absolute;
+}
+.aside .aside-container .navbar-aside ul {
+  padding: 1rem 0;
+}
+.aside .aside-container .navbar-aside ul li {
+  font-size: 1.4rem;
+}
+.aside .aside-container .navbar-aside ul li a {
+  padding: 0.8rem 0.5rem;
+  display: block;
+}
+.aside .aside-container .navbar-aside ul li a:hover {
+  background-color: var(--secondary-color);
 }
 
 section {
   min-height: 100vh;
 }
 
+/*************ABOUT ME*/
 #about-me, #contact {
   background-color: var(--bg-black-three);
 }
@@ -190,5 +236,7 @@ section {
 .section-main .cont-habilities .logo-hability {
   height: 6.2rem;
 }
+
+/*************PORTFOLIO*/
 
 /*# sourceMappingURL=style.css.map */

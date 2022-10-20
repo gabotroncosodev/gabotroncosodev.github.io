@@ -15,32 +15,33 @@ header{
         }
         .profile-text-header p{
             font-size: 1.5rem;
+            font-weight: 200;
+            &::first-line{
+                font-weight: 800;
+                font-size: 1.8rem;
+            }
         }
     }
     .navbar-header{
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        padding-top: 3rem;
+        position: relative;
         ul{
             display: flex;
-            gap: .5rem;
-            font-size: 1.3rem;
-            li{                
-                list-style: none;
-                &:hover{
-                    color: red;
-                    transition: .8s;
-                }
+            padding: 1rem 0;
+            li{
+                font-size: 1.4rem;
+                
                 a{
-                    padding: 2.2rem 3rem;
-                }
-                a:hover{
-                    background-color: var(--bg-black-one);
-                    color: var(--secondary-color);
-                    transition: .3s;
+                    padding: 1.5rem 3rem;
+                    display: block;
+                    &:hover{
+                        background-color: var(--secondary-color);
+                    }
                 }
             }
         }
+    }
+    .light-dark{
+        color: var(--black-four);
+        font-weight: 100;
     }
 }
