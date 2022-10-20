@@ -1,4 +1,21 @@
 section{
     min-height: 100vh;
-    background-color: rgb(47, 47, 47);
+}
+
+#about-me, #contact{
+    background-color: var(--bg-black-three);
+}
+
+.section-main{
+    padding: 9rem;
+
+    .cont-habilities{
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        gap: .5rem;
+        .logo-hability{
+            height: 6.2rem;
+            // background-color: darkblue;
+        }
+    }
 }

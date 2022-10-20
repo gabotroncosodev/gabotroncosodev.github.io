@@ -13,6 +13,9 @@ header{
             flex-direction: column;
             justify-content: center;
         }
+        .profile-text-header p{
+            font-size: 1.5rem;
+        }
     }
     .navbar-header{
         display: flex;
@@ -21,18 +24,22 @@ header{
         padding-top: 3rem;
         ul{
             display: flex;
-            gap: 3rem;
-            font-size: 1.5rem;
-            li{
+            gap: .5rem;
+            font-size: 1.3rem;
+            li{                
                 list-style: none;
                 &:hover{
                     color: red;
                     transition: .8s;
                 }
-            }
-            a:hover{
-                color: var(--primary-color);
-                transition: .2s;
+                a{
+                    padding: 2.2rem 3rem;
+                }
+                a:hover{
+                    background-color: var(--bg-black-one);
+                    color: var(--secondary-color);
+                    transition: .3s;
+                }
             }
         }
     }
