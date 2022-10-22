@@ -1,21 +1,28 @@
 //****************MEDIA QUERIES*/
 @mixin mobile-375 {
-    @media screen and (max-width : 375px) {
+    @media screen and (min-width : 375px) {
         @content;
     }
 }
 @mixin tablet-600{
-    @media screen and (max-width : 600px) {
+    @media screen and (min-width : 600px) {
         @content;
     }
 }
 @mixin tablet-1024 {
-    @media screen and (max-width : 1024px) {
+    @media screen and (min-width : 1024px) {
         @content;
     }
 }
 @mixin desktop-1400 {
-    @media screen and (max-width : 1400px) {
+    @media screen and (min-width : 1400px) {
         @content;
     }
+}
+
+@mixin centerinColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
 }

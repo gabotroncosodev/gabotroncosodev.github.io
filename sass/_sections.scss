@@ -6,12 +6,10 @@ section{
 }
 
 /*************ABOUT ME*/
-#about-me, #contact{
-    background-color: var(--bg-black-three);
-    
-}
+
 
 #about-me{
+    background-color: var(--bg-black-three);
     p:nth-child(2){
         margin-bottom: 1rem;
     }
@@ -56,14 +54,53 @@ section{
 
 /*************PORTFOLIO*/
 
+
+
+
 /*********************CONTACTO***/
-.grid-contacto{
-    display: flex;//cambiar a grid por cuadro detalle
-    flex-direction: column;
-    background-color: rebeccapurple;
-    .card{
-        svg{
-            height: 10rem;
+#contact{
+    background-color: var(--bg-black-one);
+    .grid-contact{        
+        .box-contact{
+            // margin-bottom: 1rem;
+            background-color: var(--bg-black-one);
+            display: flex;
+            padding: 2rem;
+            .logo-info-contact{
+                
+                @include mixins.centerinColumn;
+                padding-right: 1.8rem; 
+                svg{                
+                    height: 100%;
+                    path{
+                        fill: var(--bg-black-four);
+                    }
+                }
+            }
+            .txt-info-contact{
+                h4{
+                    margin: 0;
+                }
+                @include mixins.centerinColumn;
+                p{
+                    font-size: 2rem;
+                }
+            }
+            &:hover{
+                transition: .5s ease;
+                background-color: var(--secondary-color);
+                svg{
+                    path{
+                    transition: .5s ease;
+                    fill: var(--white);
+                    }
+                }
+                .txt-info-contact{
+                    h4{
+                        color:var(--white);
+                    }
+                }
+            }
         }
     }
 }

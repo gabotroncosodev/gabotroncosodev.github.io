@@ -13,17 +13,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-size: 16px;
-}
-@media screen and (max-width: 1400px) {
-  * {
-    font-size: 12px;
-  }
-}
-@media screen and (max-width: 1024px) {
-  * {
-    font-size: 10px;
-  }
 }
 
 html {
@@ -81,7 +70,7 @@ h3 {
 
 h4 {
   font-size: 2rem;
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 
 /***************Text*/
@@ -115,6 +104,47 @@ p::selection {
 .light-dark {
   color: var(--black-four);
   font-weight: 100;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.light-dark .switch {
+  position: relative;
+  display: inline-block;
+  width: 3rem;
+  height: 1.5rem;
+  margin: 0 10px;
+}
+.light-dark .switch input {
+  display: none;
+}
+.light-dark input:checked + .slider {
+  background-color: rgb(170, 0, 0);
+}
+.light-dark input:checked + .slider::before {
+  transform: translateX(1.5rem);
+}
+.light-dark .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--white);
+  transition: 0.4s;
+  border-radius: 34px;
+}
+.light-dark .slider:before {
+  content: "";
+  position: absolute;
+  height: 1rem;
+  width: 1rem;
+  left: 0.2rem;
+  bottom: 0.3rem;
+  background-color: var(--secondary-color);
+  transition: 0.4s;
+  border-radius: 50px;
 }
 
 header {
@@ -225,10 +255,9 @@ section {
 }
 
 /*************ABOUT ME*/
-#about-me, #contact {
+#about-me {
   background-color: var(--bg-black-three);
 }
-
 #about-me p:nth-child(2) {
   margin-bottom: 1rem;
 }
@@ -270,13 +299,47 @@ section {
 
 /*************PORTFOLIO*/
 /*********************CONTACTO***/
-.grid-contacto {
+#contact {
+  background-color: var(--bg-black-one);
+}
+#contact .grid-contact .box-contact {
+  background-color: var(--bg-black-one);
+  display: flex;
+  padding: 2rem;
+}
+#contact .grid-contact .box-contact .logo-info-contact {
   display: flex;
   flex-direction: column;
-  background-color: rebeccapurple;
+  justify-content: center;
+  padding-right: 1.8rem;
 }
-.grid-contacto .card svg {
-  height: 10rem;
+#contact .grid-contact .box-contact .logo-info-contact svg {
+  height: 100%;
+}
+#contact .grid-contact .box-contact .logo-info-contact svg path {
+  fill: var(--bg-black-four);
+}
+#contact .grid-contact .box-contact .txt-info-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#contact .grid-contact .box-contact .txt-info-contact h4 {
+  margin: 0;
+}
+#contact .grid-contact .box-contact .txt-info-contact p {
+  font-size: 2rem;
+}
+#contact .grid-contact .box-contact:hover {
+  transition: 0.5s ease;
+  background-color: var(--secondary-color);
+}
+#contact .grid-contact .box-contact:hover svg path {
+  transition: 0.5s ease;
+  fill: var(--white);
+}
+#contact .grid-contact .box-contact:hover .txt-info-contact h4 {
+  color: var(--white);
 }
 
 /*# sourceMappingURL=style.css.map */
