@@ -13,6 +13,17 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-size: 16px;
+}
+@media screen and (max-width: 1400px) {
+  * {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  * {
+    font-size: 10px;
+  }
 }
 
 html {
@@ -65,7 +76,7 @@ h2 {
 h3 {
   font-size: 2rem;
   font-weight: 700;
-  padding: 0.5rem;
+  padding: 0.5rem 0;
 }
 
 h4 {
@@ -153,11 +164,6 @@ main {
   display: grid;
   grid-template-columns: 29rem 1fr;
 }
-@media screen and (max-width: 1024px) {
-  main {
-    grid-template-columns: 20rem 1fr;
-  }
-}
 
 .aside {
   position: relative;
@@ -170,9 +176,6 @@ main {
   top: 0;
   position: sticky;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding: 4rem 0;
 }
 .aside .aside-container .profile-photo {
@@ -185,7 +188,6 @@ main {
   filter: grayscale(1);
 }
 .aside .aside-container .txt-study {
-  text-align: center;
   font-weight: 100;
 }
 .aside .aside-container .txt-study::first-line {

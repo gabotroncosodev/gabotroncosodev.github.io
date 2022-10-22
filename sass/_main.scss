@@ -3,8 +3,5 @@
 main{ 
     display: grid;
     grid-template-columns: 29rem 1fr;
-    @include mixins.tablet-1024(){
-        //! REVISAR
-        grid-template-columns: 20rem 1fr;
-    }
+    
 }
