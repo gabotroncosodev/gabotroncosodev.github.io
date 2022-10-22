@@ -135,27 +135,28 @@ header .navbar-header {
   position: relative;
 }
 header .navbar-header ul {
-  display: flex;
   padding: 1rem 0;
+  display: flex;
 }
 header .navbar-header ul li {
   font-size: 1.4rem;
 }
 header .navbar-header ul li a {
-  padding: 1.5rem 3rem;
+  padding: 1.2rem 2rem;
   display: block;
 }
 header .navbar-header ul li a:hover {
   background-color: var(--secondary-color);
 }
-header .light-dark {
-  color: var(--black-four);
-  font-weight: 100;
-}
 
 main {
   display: grid;
   grid-template-columns: 29rem 1fr;
+}
+@media screen and (max-width: 1024px) {
+  main {
+    grid-template-columns: 20rem 1fr;
+  }
 }
 
 .aside {
@@ -218,6 +219,7 @@ main {
 
 section {
   min-height: 100vh;
+  padding: 9rem;
 }
 
 /*************ABOUT ME*/
@@ -225,18 +227,54 @@ section {
   background-color: var(--bg-black-three);
 }
 
-.section-main {
-  padding: 9rem;
+#about-me p:nth-child(2) {
+  margin-bottom: 1rem;
 }
-.section-main .cont-habilities {
+#about-me .cont-habilities {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   gap: 0.5rem;
 }
-.section-main .cont-habilities .logo-hability {
+#about-me .cont-habilities .logo-hability {
   height: 6.2rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+#about-me .cont-habilities .logo-hability svg {
+  width: 100%;
+  height: 100%;
+}
+#about-me .cont-habilities .logo-hability svg path {
+  fill: var(--bg-black-four);
+}
+#about-me .cont-habilities .logo-hability:hover path {
+  transition: 0.5s;
+  fill: var(--white);
+}
+#about-me .cont-habilities .logo-hability:hover .name-hability {
+  transition: 0.7s;
+  opacity: 1;
+}
+#about-me .cont-habilities .logo-hability .name-hability {
+  bottom: -6rem;
+  position: absolute;
+  text-align: center;
+  padding: 0.5rem;
+  background-color: var(--bg-black-one);
+  border-radius: 0.3rem;
+  opacity: 0;
 }
 
 /*************PORTFOLIO*/
+/*********************CONTACTO***/
+.grid-contacto {
+  display: flex;
+  flex-direction: column;
+  background-color: rebeccapurple;
+}
+.grid-contacto .card svg {
+  height: 10rem;
+}
 
 /*# sourceMappingURL=style.css.map */

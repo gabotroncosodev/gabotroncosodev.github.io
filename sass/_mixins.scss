@@ -1,14 +1,21 @@
-@mixin ul-nav {
-    padding: 1rem 0;
-        li{
-            font-size: 1.4rem;
-            
-            a{
-                padding: .8rem .5rem;
-                display: block;
-                &:hover{
-                    background-color: var(--secondary-color);
-                }
-            }
-        }
+//****************MEDIA QUERIES*/
+@mixin mobile-375 {
+    @media screen and (max-width : 375px) {
+        @content;
+    }
+}
+@mixin tablet-600{
+    @media screen and (max-width : 600px) {
+        @content;
+    }
+}
+@mixin tablet-1024 {
+    @media screen and (max-width : 1024px) {
+        @content;
+    }
+}
+@mixin desktop-1350 {
+    @media screen and (max-width : 1350px) {
+        @content;
+    }
 }

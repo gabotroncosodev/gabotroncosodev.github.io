@@ -1,25 +1,70 @@
+@use 'mixins';
+
 section{
-    min-height: 100vh;
+    min-height: 100vh;    
+    padding: 9rem;
 }
 
 /*************ABOUT ME*/
 #about-me, #contact{
     background-color: var(--bg-black-three);
+    
 }
 
-.section-main{
-    padding: 9rem;
-
+#about-me{
+    p:nth-child(2){
+        margin-bottom: 1rem;
+    }
     .cont-habilities{
         display: grid;
         grid-template-columns: repeat(10, 1fr);
         gap: .5rem;
         .logo-hability{
             height: 6.2rem;
-            // background-color: darkblue;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            svg{
+                width: 100%;
+                height: 100%;
+                path{
+                    fill: var(--bg-black-four);                      
+                }          
+            }
+            &:hover{
+                path{
+                    transition: .5s;
+                    fill: var(--white);   
+                }                
+                .name-hability{
+                    transition: .7s;
+                    opacity: 1;
+                }                   
+            }
+            .name-hability{      
+                bottom: -6rem;          
+                position: absolute;
+                text-align: center;
+                padding: 0.5rem;
+                background-color: var(--bg-black-one);
+                border-radius: .3rem;
+                opacity: 0;
+            }
         }
     }
 }
 
 /*************PORTFOLIO*/
+
+/*********************CONTACTO***/
+.grid-contacto{
+    display: flex;//cambiar a grid por cuadro detalle
+    flex-direction: column;
+    background-color: rebeccapurple;
+    .card{
+        svg{
+            height: 10rem;
+        }
+    }
+}
 

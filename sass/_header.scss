@@ -1,3 +1,5 @@
+@use 'mixins';
+
 header{
     background-color: var(--bg-color);
     height: 100vh; 
@@ -25,13 +27,12 @@ header{
     .navbar-header{
         position: relative;
         ul{
-            display: flex;
             padding: 1rem 0;
+            display: flex;
             li{
-                font-size: 1.4rem;
-                
+                font-size: 1.4rem;            
                 a{
-                    padding: 1.5rem 3rem;
+                    padding: 1.2rem 2rem;
                     display: block;
                     &:hover{
                         background-color: var(--secondary-color);
@@ -40,8 +41,5 @@ header{
             }
         }
     }
-    .light-dark{
-        color: var(--black-four);
-        font-weight: 100;
-    }
+    
 }
