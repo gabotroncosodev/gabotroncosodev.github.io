@@ -1,0 +1,38 @@
+//****************MEDIA QUERIES*/
+@mixin mq375 {
+    @media screen and (max-width : 375px) {
+        @content;
+    }
+}
+@mixin mq600{
+    @media screen and (max-width : 600px) {
+        @content;
+    }
+}
+@mixin mq800 {
+    @media screen and (max-width : 800px) {
+        @content;
+    }
+}
+@mixin mq950 {
+    @media screen and (max-width : 950px) {
+        @content;
+    }
+}
+@mixin mq1024 {
+    @media screen and (max-width : 1024px) {
+        @content;
+    }
+}
+@mixin mq1400 {
+    @media screen and (max-width : 1400px) {
+        @content;
+    }
+}
+
+@mixin flexCenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}

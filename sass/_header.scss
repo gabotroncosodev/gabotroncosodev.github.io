@@ -1,0 +1,68 @@
+@use 'mixins';
+
+header{
+    @include mixins.flexCenter;
+    background-color: var(--bg-color);
+    height: 100vh; 
+    align-items: center;
+    @include mixins.mq375{ 
+        padding: 0 1rem;
+
+    }
+    .cont-profile-header{
+        display: flex;
+        gap: 1.5rem;
+        @include mixins.mq1400{  
+            padding: 0 2rem ;
+        }
+        @include mixins.mq800{            
+            flex-direction: column;
+            align-items: center;
+        }
+        @include mixins.mq600{  
+            padding: 0 ;
+
+        }
+        .profile-photo{            
+            width: 25rem ; 
+            @include mixins.mq600{  
+                width: 20rem              
+            }           
+            img{
+                width: 100%;
+            }
+        }
+        .profile-text-header{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .profile-text-header p{
+            font-size: 1.5rem;
+            font-weight: 200;
+            
+            &::first-line{
+                font-weight: 800;
+                font-size: 1.8rem;
+            }
+        }
+    }
+    .navbar-header{
+        position: relative;
+        ul{
+            padding: 1rem 0;
+            display: flex;
+            li{
+                font-size: 1.4rem;            
+                a{
+                    padding: 1.2rem 2rem;
+                    display: block;
+                    &:hover{
+                        background-color: var(--secondary-color);
+                    }
+                }
+            }
+        }
+    }
+    
+}

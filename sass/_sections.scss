@@ -1,0 +1,145 @@
+@use 'mixins';
+
+section{
+    min-height: 100vh;    
+    padding: 9rem;
+    width: 100%;    
+    @include mixins.mq1400{
+        padding: 3rem;
+    }
+}
+
+/*************ABOUT ME*/
+
+
+#about-me{  
+    background-color: var(--bg-black-three);
+    p:nth-child(2){
+        margin-bottom: 1rem;
+    }
+    .cont-habilities{        
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        gap: .5rem;
+        .logo-hability{
+            height: 6.2rem;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            svg{
+                width: 100%;
+                height: 100%;
+                path{
+                    fill: var(--bg-black-four);                      
+                }          
+            }
+            &:hover{
+                path{
+                    transition: .5s;
+                    fill: var(--white);   
+                }                
+                .name-hability{
+                    transition: .7s;
+                    opacity: 1;
+                }                   
+            }
+            .name-hability{      
+                bottom: -6rem;          
+                position: absolute;
+                text-align: center;
+                padding: 0.5rem;
+                background-color: var(--bg-black-one);
+                border-radius: .3rem;
+                opacity: 0;
+            }
+        }
+    }
+}
+
+/*************PORTFOLIO*/
+#portfolio{
+    .grid-portfolio{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        gap: 1.5rem;
+        figure{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            min-height: 1rem;
+            img{
+                grid-column: 1/2;
+                grid-row: 1/2;
+                height: 100%;
+                object-fit: cover;
+            }
+            figcaption {
+                background-color: rgba(0, 0, 0, 0.581);
+                grid-column: 1/2;
+                grid-row: 1/2;
+                z-index: 1;
+                @include mixins.flexCenter;
+                flex-direction: column;
+                padding: 5rem;
+                @include mixins.mq800{
+                    p{
+                        font-size:1rem;
+                    }
+                }
+            }
+        }
+        img{
+            width: 100%;
+        }
+        
+    }
+}
+
+/*********************CONTACTO***/
+#contact{
+    background-color: var(--bg-black-one);
+    .grid-contact{        
+        .box-contact{
+            // margin-bottom: 1rem;
+            background-color: var(--bg-black-one);
+            display: flex;
+            padding: 2rem;
+            .logo-info-contact{
+                
+                @include mixins.flexCenter;
+                padding-right: 1.8rem; 
+                svg{                
+                    height: 100%;
+                    path{
+                        fill: var(--bg-black-four);
+                    }
+                }
+            }
+            .txt-info-contact{
+                h4{
+                    margin: 0;
+                }
+                @include mixins.flexCenter;
+                p{
+                    font-size: 2rem;
+                }
+            }
+            &:hover{
+                transition: .5s ease;
+                background-color: var(--secondary-color);
+                svg{
+                    path{
+                    transition: .5s ease;
+                    fill: var(--white);
+                    }
+                }
+                .txt-info-contact{
+                    h4{
+                        color:var(--white);
+                    }
+                }
+            }
+        }
+    }
+}
+
