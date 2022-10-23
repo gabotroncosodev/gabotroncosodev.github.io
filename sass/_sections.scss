@@ -3,17 +3,21 @@
 section{
     min-height: 100vh;    
     padding: 9rem;
+    width: 100%;    
+    @include mixins.mq1400{
+        padding: 3rem;
+    }
 }
 
 /*************ABOUT ME*/
 
 
-#about-me{
+#about-me{  
     background-color: var(--bg-black-three);
     p:nth-child(2){
         margin-bottom: 1rem;
     }
-    .cont-habilities{
+    .cont-habilities{        
         display: grid;
         grid-template-columns: repeat(10, 1fr);
         gap: .5rem;
@@ -53,9 +57,43 @@ section{
 }
 
 /*************PORTFOLIO*/
-
-
-
+#portfolio{
+    .grid-portfolio{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        gap: 1.5rem;
+        figure{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            min-height: 1rem;
+            img{
+                grid-column: 1/2;
+                grid-row: 1/2;
+                height: 100%;
+                object-fit: cover;
+            }
+            figcaption {
+                background-color: rgba(0, 0, 0, 0.581);
+                grid-column: 1/2;
+                grid-row: 1/2;
+                z-index: 1;
+                @include mixins.flexCenter;
+                flex-direction: column;
+                padding: 5rem;
+                @include mixins.mq800{
+                    p{
+                        font-size:1rem;
+                    }
+                }
+            }
+        }
+        img{
+            width: 100%;
+        }
+        
+    }
+}
 
 /*********************CONTACTO***/
 #contact{
@@ -68,7 +106,7 @@ section{
             padding: 2rem;
             .logo-info-contact{
                 
-                @include mixins.centerinColumn;
+                @include mixins.flexCenter;
                 padding-right: 1.8rem; 
                 svg{                
                     height: 100%;
@@ -81,7 +119,7 @@ section{
                 h4{
                     margin: 0;
                 }
-                @include mixins.centerinColumn;
+                @include mixins.flexCenter;
                 p{
                     font-size: 2rem;
                 }

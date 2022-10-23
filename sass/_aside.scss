@@ -56,3 +56,8 @@
         }
     }
 }
+@include mixins.mq800{
+    .aside{
+        display: none;
+    }
+}

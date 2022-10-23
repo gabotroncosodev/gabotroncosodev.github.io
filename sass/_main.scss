@@ -4,4 +4,7 @@ main{
     display: grid;
     grid-template-columns: 29rem 1fr;
     
+    @include mixins.mq800{
+        grid-template-columns: 1fr;
+    }
 }

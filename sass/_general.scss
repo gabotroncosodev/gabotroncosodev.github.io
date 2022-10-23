@@ -35,9 +35,6 @@ body::-webkit-scrollbar {
 
 
 img{
-    width: 400px;
-    height: 450px;
-    object-fit: cover;
     filter: grayscale(1)
 }
 
@@ -48,6 +45,9 @@ h1,h2,h3,h4,h5,h6{
 
 h1{
     font-size: 4.5rem;
+    @include mixins.mq950{
+        font-size: 2.5rem;
+    }
 }
 
 h2{
