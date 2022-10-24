@@ -4,6 +4,9 @@ main{
     display: grid;
     grid-template-columns: 29rem 1fr;
     
+    @include mixins.mq1400{
+        grid-template-columns: 20rem 1fr;
+    }
     @include mixins.mq500{
         grid-template-columns: 1fr;
     }

@@ -6,20 +6,27 @@
     }
 }
 @mixin mq500 {
-    @media (max-width : 500px) {
+    @media (max-width : 700px) {
         @content;
     }
 }
-@mixin mq900 {
-    @media (max-width : 900px) {
+
+@mixin mq820 {
+    @media (max-width : 820px) {
         @content;
-    }
+    }    
+}
+@mixin mq1024 {
+    @media (max-width : 1024px) {
+        @content;
+    }    
 }
 @mixin mq1200 {
     @media (max-width : 1200px) {
         @content;
-    }
+    }    
 }
+
 @mixin mq1400 {
     @media (max-width : 1400px) {
         @content;

@@ -29,7 +29,10 @@ header{
                 object-fit: cover;
             }
         }
-        .profile-text-header{            
+        .profile-text-header{ 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             p{
                 font-size: 1.5rem;
                 font-weight: 200;
@@ -52,22 +55,22 @@ header{
         position: relative;
         display: flex;
         justify-content: center;
-        @include mixins.mq500{  
+        @include mixins.mq820{  
             display: block;
         } 
         ul{
             padding: 1rem 0;
             display: flex;
-            @include mixins.mq500{  
+            @include mixins.mq820{  
                 display: block;
             }            
             li{
                 font-size: 1.4rem;    
-                @include mixins.mq500{  
+                @include mixins.mq820{  
                     margin-bottom: 1rem;
                 }         
                 a{
-                    @include mixins.mq500{  
+                    @include mixins.mq820{  
                         background-color: var(--bg-black-three);
                     } 
                     padding: 1.2rem 2rem;
