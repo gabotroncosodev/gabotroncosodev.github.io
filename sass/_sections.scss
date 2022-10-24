@@ -4,8 +4,9 @@ section{
     min-height: 100vh;    
     padding: 9rem;
     width: 100%;    
-    @include mixins.mq1400{
-        padding: 3rem;
+    
+    @include mixins.mq500{  
+        padding:1rem ;
     }
 }
 
@@ -14,8 +15,16 @@ section{
 
 #about-me{  
     background-color: var(--bg-black-three);
-    p:nth-child(2){
-        margin-bottom: 1rem;
+    p{
+        @include mixins.mq500{  
+            font-size: 1rem;
+        }        
+        &:nth-child(2){
+            margin-bottom: 1rem; 
+            @include mixins.mq500{  
+                font-size: 1.2rem;
+            }         
+        }
     }
     .cont-habilities{        
         display: grid;
@@ -60,13 +69,14 @@ section{
 #portfolio{
     .grid-portfolio{
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-        gap: 1.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+        width: 100%;
+        gap: 1.2rem;
         figure{
             display: grid;
             grid-template-columns: 1fr;
             grid-template-rows: 1fr;
-            min-height: 1rem;
+            min-height: .5rem;
             img{
                 grid-column: 1/2;
                 grid-row: 1/2;
@@ -77,11 +87,13 @@ section{
                 background-color: rgba(0, 0, 0, 0.581);
                 grid-column: 1/2;
                 grid-row: 1/2;
-                z-index: 1;
+                z-index: 1;   
                 @include mixins.flexCenter;
                 flex-direction: column;
                 padding: 5rem;
-                @include mixins.mq800{
+
+                @include mixins.mq500{
+                    padding:1rem;
                     p{
                         font-size:1rem;
                     }
@@ -100,14 +112,22 @@ section{
     background-color: var(--bg-black-one);
     .grid-contact{        
         .box-contact{
-            // margin-bottom: 1rem;
             background-color: var(--bg-black-one);
             display: flex;
             padding: 2rem;
-            .logo-info-contact{
-                
-                @include mixins.flexCenter;
+            @include mixins.mq500{
+                display: block;
+                background-color: var(--bg-black-two);
+                margin-bottom: 1rem;
+            }
+            .logo-info-contact{   
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 padding-right: 1.8rem; 
+                @include mixins.mq500{
+                    padding-right: 0; 
+                } 
                 svg{                
                     height: 100%;
                     path{
@@ -116,13 +136,24 @@ section{
                 }
             }
             .txt-info-contact{
+                @include mixins.mq500{
+                    margin-top: 1rem;
+                } 
                 h4{
                     margin: 0;
-                }
+                    @include mixins.mq500{
+                        margin: 0 auto;
+                        color: var(--white);
+                    }
+                }                
                 @include mixins.flexCenter;
                 p{
-                    font-size: 2rem;
+                    font-size: 2rem;                    
+                    @include mixins.mq500{
+                        display: none;
+                    }             
                 }
+                   
             }
             &:hover{
                 transition: .5s ease;

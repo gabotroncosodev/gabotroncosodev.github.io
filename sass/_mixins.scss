@@ -1,31 +1,27 @@
 //****************MEDIA QUERIES*/
-@mixin mq375 {
-    @media screen and (max-width : 375px) {
+
+@mixin mq350 {
+    @media (max-width : 350px) {
         @content;
     }
 }
-@mixin mq600{
-    @media screen and (max-width : 600px) {
+@mixin mq500 {
+    @media (max-width : 500px) {
         @content;
     }
 }
-@mixin mq800 {
-    @media screen and (max-width : 800px) {
+@mixin mq900 {
+    @media (max-width : 900px) {
         @content;
     }
 }
-@mixin mq950 {
-    @media screen and (max-width : 950px) {
-        @content;
-    }
-}
-@mixin mq1024 {
-    @media screen and (max-width : 1024px) {
+@mixin mq1200 {
+    @media (max-width : 1200px) {
         @content;
     }
 }
 @mixin mq1400 {
-    @media screen and (max-width : 1400px) {
+    @media (max-width : 1400px) {
         @content;
     }
 }

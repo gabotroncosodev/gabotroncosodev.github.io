@@ -1,60 +1,75 @@
 @use 'mixins';
 
 header{
-    @include mixins.flexCenter;
-    background-color: var(--bg-color);
-    height: 100vh; 
-    align-items: center;
-    @include mixins.mq375{ 
-        padding: 0 1rem;
-
+    display: grid;
+    place-content: center;
+    width: 100%;
+    min-height: 100vh; 
+    @include mixins.mq500{  
+        padding:1rem ;
+        place-content: 0;
     }
-    .cont-profile-header{
-        display: flex;
-        gap: 1.5rem;
-        @include mixins.mq1400{  
-            padding: 0 2rem ;
-        }
-        @include mixins.mq800{            
-            flex-direction: column;
-            align-items: center;
-        }
-        @include mixins.mq600{  
-            padding: 0 ;
-
-        }
-        .profile-photo{            
-            width: 25rem ; 
-            @include mixins.mq600{  
-                width: 20rem              
-            }           
+    @include mixins.mq1200{  
+        padding:2rem ;
+    }
+    .cont-profile-header{ 
+        display: flex; 
+        @include mixins.mq500{  
+            display: block;
+        }  
+            
+        .profile-photo{ 
+            margin-right: 2rem ;  
+            @include mixins.mq500{  
+                margin-right:0;
+            }             
             img{
                 width: 100%;
+                height: 25rem;
+                object-fit: cover;
             }
         }
-        .profile-text-header{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        .profile-text-header p{
-            font-size: 1.5rem;
-            font-weight: 200;
-            
-            &::first-line{
-                font-weight: 800;
-                font-size: 1.8rem;
+        .profile-text-header{            
+            p{
+                font-size: 1.5rem;
+                font-weight: 200;
+                
+                &::first-line{
+                    font-weight: 800;
+                    font-size: 1.8rem;                    
+                }
+                @include mixins.mq500{  
+                    font-size: 1.2rem;
+                    &::first-line{
+                        font-size: 1.2rem;
+                    }
+                }
+                
             }
         }
     }
     .navbar-header{
         position: relative;
+        display: flex;
+        justify-content: center;
+        @include mixins.mq500{  
+            display: block;
+        } 
         ul{
             padding: 1rem 0;
             display: flex;
+            @include mixins.mq500{  
+                display: block;
+            }            
             li{
-                font-size: 1.4rem;            
+                font-size: 1.4rem;    
+                @include mixins.mq500{  
+                    margin-bottom: 1rem;
+                }         
                 a{
+                    @include mixins.mq500{  
+                        background-color: var(--bg-black-three);
+                    } 
                     padding: 1.2rem 2rem;
                     display: block;
                     &:hover{
@@ -62,6 +77,14 @@ header{
                     }
                 }
             }
+        }
+    }
+    .light-dark{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 1rem;
+        @include mixins.mq500{  
+            justify-content: center;
         }
     }
     

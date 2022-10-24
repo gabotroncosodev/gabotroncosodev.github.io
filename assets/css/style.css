@@ -14,6 +14,11 @@
   margin: 0;
   box-sizing: border-box;
 }
+@media (max-width: 500px) {
+  * {
+    text-align: center;
+  }
+}
 
 html {
   scroll-behavior: smooth;
@@ -52,9 +57,14 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 4.5rem;
 }
-@media screen and (max-width: 950px) {
+@media (max-width: 500px) {
   h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+  }
+}
+@media (max-width: 350px) {
+  h1 {
+    font-size: 2rem;
   }
 }
 
@@ -62,6 +72,11 @@ h2 {
   font-size: 5rem;
   font-weight: 700;
   margin-bottom: 2rem;
+}
+@media (max-width: 500px) {
+  h2 {
+    font-size: 2.5rem;
+  }
 }
 
 h3 {
@@ -150,53 +165,42 @@ p::selection {
 }
 
 header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: var(--bg-color);
-  height: 100vh;
-  align-items: center;
+  display: grid;
+  place-content: center;
+  width: 100%;
+  min-height: 100vh;
 }
-@media screen and (max-width: 375px) {
+@media (max-width: 500px) {
   header {
-    padding: 0 1rem;
+    padding: 1rem;
+    place-content: 0;
+  }
+}
+@media (max-width: 1200px) {
+  header {
+    padding: 2rem;
   }
 }
 header .cont-profile-header {
   display: flex;
-  gap: 1.5rem;
 }
-@media screen and (max-width: 1400px) {
+@media (max-width: 500px) {
   header .cont-profile-header {
-    padding: 0 2rem;
-  }
-}
-@media screen and (max-width: 800px) {
-  header .cont-profile-header {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-@media screen and (max-width: 600px) {
-  header .cont-profile-header {
-    padding: 0;
+    display: block;
   }
 }
 header .cont-profile-header .profile-photo {
-  width: 25rem;
+  margin-right: 2rem;
 }
-@media screen and (max-width: 600px) {
+@media (max-width: 500px) {
   header .cont-profile-header .profile-photo {
-    width: 20rem;
+    margin-right: 0;
   }
 }
 header .cont-profile-header .profile-photo img {
   width: 100%;
-}
-header .cont-profile-header .profile-text-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  height: 25rem;
+  object-fit: cover;
 }
 header .cont-profile-header .profile-text-header p {
   font-size: 1.5rem;
@@ -206,29 +210,69 @@ header .cont-profile-header .profile-text-header p::first-line {
   font-weight: 800;
   font-size: 1.8rem;
 }
+@media (max-width: 500px) {
+  header .cont-profile-header .profile-text-header p {
+    font-size: 1.2rem;
+  }
+  header .cont-profile-header .profile-text-header p::first-line {
+    font-size: 1.2rem;
+  }
+}
 header .navbar-header {
   position: relative;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 500px) {
+  header .navbar-header {
+    display: block;
+  }
 }
 header .navbar-header ul {
   padding: 1rem 0;
   display: flex;
 }
+@media (max-width: 500px) {
+  header .navbar-header ul {
+    display: block;
+  }
+}
 header .navbar-header ul li {
   font-size: 1.4rem;
+}
+@media (max-width: 500px) {
+  header .navbar-header ul li {
+    margin-bottom: 1rem;
+  }
 }
 header .navbar-header ul li a {
   padding: 1.2rem 2rem;
   display: block;
 }
+@media (max-width: 500px) {
+  header .navbar-header ul li a {
+    background-color: var(--bg-black-three);
+  }
+}
 header .navbar-header ul li a:hover {
   background-color: var(--secondary-color);
+}
+header .light-dark {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+@media (max-width: 500px) {
+  header .light-dark {
+    justify-content: center;
+  }
 }
 
 main {
   display: grid;
   grid-template-columns: 29rem 1fr;
 }
-@media screen and (max-width: 800px) {
+@media (max-width: 500px) {
   main {
     grid-template-columns: 1fr;
   }
@@ -240,6 +284,11 @@ main {
   flex-direction: column;
   align-items: center;
   background-color: var(--bg-black-one);
+}
+@media (max-width: 500px) {
+  .aside {
+    display: none;
+  }
 }
 .aside .aside-container {
   top: 0;
@@ -288,19 +337,14 @@ main {
   background-color: var(--secondary-color);
 }
 
-@media screen and (max-width: 800px) {
-  .aside {
-    display: none;
-  }
-}
 section {
   min-height: 100vh;
   padding: 9rem;
   width: 100%;
 }
-@media screen and (max-width: 1400px) {
+@media (max-width: 500px) {
   section {
-    padding: 3rem;
+    padding: 1rem;
   }
 }
 
@@ -308,8 +352,18 @@ section {
 #about-me {
   background-color: var(--bg-black-three);
 }
+@media (max-width: 500px) {
+  #about-me p {
+    font-size: 1rem;
+  }
+}
 #about-me p:nth-child(2) {
   margin-bottom: 1rem;
+}
+@media (max-width: 500px) {
+  #about-me p:nth-child(2) {
+    font-size: 1.2rem;
+  }
 }
 #about-me .cont-habilities {
   display: grid;
@@ -350,14 +404,15 @@ section {
 /*************PORTFOLIO*/
 #portfolio .grid-portfolio {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  width: 100%;
+  gap: 1.2rem;
 }
 #portfolio .grid-portfolio figure {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  min-height: 1rem;
+  min-height: 0.5rem;
 }
 #portfolio .grid-portfolio figure img {
   grid-column: 1/2;
@@ -376,7 +431,10 @@ section {
   flex-direction: column;
   padding: 5rem;
 }
-@media screen and (max-width: 800px) {
+@media (max-width: 500px) {
+  #portfolio .grid-portfolio figure figcaption {
+    padding: 1rem;
+  }
   #portfolio .grid-portfolio figure figcaption p {
     font-size: 1rem;
   }
@@ -394,11 +452,23 @@ section {
   display: flex;
   padding: 2rem;
 }
+@media (max-width: 500px) {
+  #contact .grid-contact .box-contact {
+    display: block;
+    background-color: var(--bg-black-two);
+    margin-bottom: 1rem;
+  }
+}
 #contact .grid-contact .box-contact .logo-info-contact {
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding-right: 1.8rem;
+}
+@media (max-width: 500px) {
+  #contact .grid-contact .box-contact .logo-info-contact {
+    padding-right: 0;
+  }
 }
 #contact .grid-contact .box-contact .logo-info-contact svg {
   height: 100%;
@@ -411,11 +481,27 @@ section {
   flex-direction: column;
   justify-content: center;
 }
+@media (max-width: 500px) {
+  #contact .grid-contact .box-contact .txt-info-contact {
+    margin-top: 1rem;
+  }
+}
 #contact .grid-contact .box-contact .txt-info-contact h4 {
   margin: 0;
 }
+@media (max-width: 500px) {
+  #contact .grid-contact .box-contact .txt-info-contact h4 {
+    margin: 0 auto;
+    color: var(--white);
+  }
+}
 #contact .grid-contact .box-contact .txt-info-contact p {
   font-size: 2rem;
+}
+@media (max-width: 500px) {
+  #contact .grid-contact .box-contact .txt-info-contact p {
+    display: none;
+  }
 }
 #contact .grid-contact .box-contact:hover {
   transition: 0.5s ease;

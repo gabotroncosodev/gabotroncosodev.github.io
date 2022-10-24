@@ -3,8 +3,11 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    @include mixins.mq500{  
+        text-align: center;
+    }
     
-    // border: 1px solid red;
+    // border: .1rem solid red;
 }
 
 html {
@@ -45,15 +48,23 @@ h1,h2,h3,h4,h5,h6{
 
 h1{
     font-size: 4.5rem;
-    @include mixins.mq950{
-        font-size: 2.5rem;
+    @include mixins.mq500{
+        font-size: 3rem;
     }
+    @include mixins.mq350{
+        font-size: 2rem;
+    }
+    
+    
 }
 
 h2{
     font-size: 5rem;
     font-weight: 700;
     margin-bottom: 2rem;
+    @include mixins.mq500{  
+        font-size: 2.5rem;
+    }  
 }
 h3{
     font-size: 2rem;
