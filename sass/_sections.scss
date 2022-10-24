@@ -114,6 +114,7 @@ section{
             }
             figcaption {
                 background-color: #000000e0;
+                color: #fff;
                 grid-column: 1/2;
                 grid-row: 1/2;
                 z-index: 1; 
@@ -134,11 +135,10 @@ section{
                     }
                 }
                 a{      
-                               
+                    color: #fff;        
                     font-size: 1.4rem;
-                    margin-top: 2rem;
-                    border-left: .5rem solid var(--bg-secondary-color);                   
-                    // padding-left: 1rem;
+                    margin-top: 1rem;
+                    border-left: .5rem solid var(--bg-secondary-color);
                     padding: 1rem;
                     transition: .2s;
                     &:hover{
@@ -199,7 +199,8 @@ section{
                     }
                 }                
                 @include mixins.flexCenter;
-                p{
+                p{  
+                    
                     font-size: 2rem; 
                         
                     @include mixins.mq1200{
@@ -214,15 +215,18 @@ section{
             &:hover{
                 transition: .5s ease;
                 background-color: var(--bg-secondary-color);
+                color:#fff;
                 svg{
                     path{
                     transition: .5s ease;
-                    fill: var(--bg-white-color);
+                    // fill: var(--bg-white-color);
+                    fill:#fff;
                     }
                 }
                 .txt-info-contact{
                     h4{
-                        color:var(--bg-white-color);
+                        // color:var(--bg-white-color);
+                        color:#fff;
                     }
                 }
             }

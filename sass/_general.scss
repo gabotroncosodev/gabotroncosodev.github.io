@@ -36,7 +36,7 @@ body::-webkit-scrollbar {
 
 
 img{
-    filter: grayscale(1)
+    filter: grayscale(1) brightness(1.30);
 }
 
 /***************Headlings*/
@@ -127,7 +127,7 @@ p{
         }
     }
     input:checked + .slider{
-        background-color: rgb(170, 0, 0);
+        background-color: var(--bg-white-color);
         &::before{
             transform: translateX(1.5rem);
         }
