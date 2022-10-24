@@ -71,12 +71,12 @@ header{
                 }         
                 a{
                     @include mixins.mq820{  
-                        background-color: var(--bg-black-three);
+                        background-color: var(--bg-black-three-color);
                     } 
                     padding: 1.2rem 2rem;
                     display: block;
                     &:hover{
-                        background-color: var(--secondary-color);
+                        background-color: var(--bg-secondary-color);
                     }
                 }
             }

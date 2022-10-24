@@ -2,19 +2,16 @@
 
 section{
     min-height: 100vh;    
-    padding: 9rem;
+    padding: 8rem;
     width: 100%;    
     
     @include mixins.mq1400{  
-        padding:5rem ;
+        padding:4rem ;
     }
     @include mixins.mq1200{  
         padding:3rem ;
-    }
-    @include mixins.mq820{
-        padding:2.5rem ; 
-    }    
-    @include mixins.mq500{  
+    }      
+    @include mixins.mq820{  
         padding:1.5rem ;
     }
 }
@@ -23,7 +20,7 @@ section{
 
 
 #about-me{  
-    background-color: var(--bg-black-three);
+    background-color: var(--bg-black-three-color);
     p{
         margin-bottom: 2rem;
         @include mixins.mq500{  
@@ -37,20 +34,54 @@ section{
         }
     }
     .grid-skills{
-        // display: grid;
-        // grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 2fr));
         gap: 1rem;
         .box-skill{
-            background-color: var(--bg-black-two);
-            .box-icon-skill{
-                padding: 1rem;
-                svg{
-                    height: 5rem;
-                    width: 100%;
-                    path{
-                        fill: white;
+            height: 10rem;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            cursor: pointer;
+            background-color: var(--bg-black-three-color);
+            transition: .2s ease-in;
+            &:hover, &:checked{
+                background-color: var(--bg-black-two-color);
+                .box-icon-skill{
+                    svg{
+                        path{
+                            fill:var(--bg-black-one-color);
+                        }
                     }
                 }
+                p {
+                    display: block;
+                }
+
+            }                     
+            .box-icon-skill{
+                grid-column: 1/2;
+                grid-row: 1/2;
+                object-fit: cover;
+                display: flex;
+                justify-content: center;
+                
+                svg{
+                    width:7rem;
+                    height:7rem;
+                    path{
+                        transition: .2s ease-in;
+                        fill:var(--bg-gray-color);
+                    }
+                }
+            }   
+            p {  text-align: center;
+                font-size: 1.5rem; 
+                font-weight: 700;
+                display: none;
+                z-index: 1;
+                grid-column: 1/2;
+                grid-row: 1/2;
             }
         }
     }
@@ -62,58 +93,79 @@ section{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
         width: 100%;
-        gap: 1.2rem;
+        gap: 2rem;
         figure{
+            border: .1rem solid var( --bg-black-color);
             display: grid;
             grid-template-columns: 1fr;
             grid-template-rows: 1fr;
             min-height: .5rem;
+            &:hover{
+                figcaption{
+                    clip-path: circle(150% at top left) ;
+                }
+            }
             img{
                 grid-column: 1/2;
                 grid-row: 1/2;
+                width: 100%;
                 height: 100%;
                 object-fit: cover;
             }
             figcaption {
-                background-color: rgba(0, 0, 0, 0.581);
+                background-color: #000000e0;
                 grid-column: 1/2;
                 grid-row: 1/2;
-                z-index: 1;   
+                z-index: 1; 
+
+                clip-path: circle(0 at top left) ;
+                transition: clip-path .5s;
+
                 @include mixins.flexCenter;
                 flex-direction: column;
-                padding: 5rem;
+                padding: 2rem;
                 @include mixins.mq820{
                     padding: 3rem;   
                 }
-                @include mixins.mq500{
+                @include mixins.mq820{
                     padding:1rem;
                     p{
                         font-size:1rem;
                     }
                 }
+                a{      
+                               
+                    font-size: 1.4rem;
+                    margin-top: 2rem;
+                    border-left: .5rem solid var(--bg-secondary-color);                   
+                    // padding-left: 1rem;
+                    padding: 1rem;
+                    transition: .2s;
+                    &:hover{
+                        background-color: var(--bg-secondary-color);
+                    }
+                }
             }
         }
-        img{
-            width: 100%;
-        }
+        
         
     }
 }
 
 /*********************CONTACTO***/
 #contact{
-    background-color: var(--bg-black-one);
+    background-color: var(--bg-black-one-color);
     .grid-contact{              
         .box-contact{
-            background-color: var(--bg-black-one);
+            background-color: var(--bg-black-one-color);
             display: flex;
             padding: 2rem;
             @include mixins.mq1200{
                 padding: 1rem;
             } 
-            @include mixins.mq820{
+            @include mixins.mq500{
                 display: block;
-                background-color: var(--bg-black-two);
+                background-color: var(--bg-black-two-color);
                 margin-bottom: 1rem;
             }
             
@@ -131,19 +183,19 @@ section{
                 svg{                
                     height: 100%;
                     path{
-                        fill: var(--bg-black-four);
+                        fill: var(--bg-black-four-color);
                     }
                 }
             }
             .txt-info-contact{
                 @include mixins.mq820{
-                    margin-top: 1rem;
+                    margin-bottom: 1rem;
                 } 
                 h4{
                     margin: 0;
-                    @include mixins.mq820{
+                    @include mixins.mq500{
                         margin: 0 auto;
-                        color: var(--white);
+                        color: var(--bg-white-color);
                     }
                 }                
                 @include mixins.flexCenter;
@@ -161,16 +213,16 @@ section{
             }
             &:hover{
                 transition: .5s ease;
-                background-color: var(--secondary-color);
+                background-color: var(--bg-secondary-color);
                 svg{
                     path{
                     transition: .5s ease;
-                    fill: var(--white);
+                    fill: var(--bg-white-color);
                     }
                 }
                 .txt-info-contact{
                     h4{
-                        color:var(--white);
+                        color:var(--bg-white-color);
                     }
                 }
             }

@@ -10,7 +10,6 @@
         @content;
     }
 }
-
 @mixin mq820 {
     @media (max-width : 820px) {
         @content;

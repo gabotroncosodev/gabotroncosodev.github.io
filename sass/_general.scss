@@ -3,9 +3,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    @include mixins.mq500{  
-        text-align: center;
-    }
+    
     
     // border: .1rem solid red;
 }
@@ -14,9 +12,9 @@ html {
     scroll-behavior: smooth;
 }
 body{
-    color: var(--white);
+    color: var(--bg-white-color);
     height: 100vh;
-    background-color: var(--bg-black-two);
+    background-color: var(--bg-black-two-color);
     font-family: 'Poppins', sans-serif;
     font-family: 'Roboto', sans-serif;
     
@@ -28,11 +26,11 @@ body::-webkit-scrollbar {
   }
   
   body::-webkit-scrollbar-track {
-    background: var(--bg-black-one);     
+    background: var(--bg-black-one-color);     
   }
   
   body::-webkit-scrollbar-thumb {
-    background-color: var(--secondary-color);
+    background-color: var(--bg-secondary-color);
     border-radius: .2rem; 
   }
 
@@ -43,7 +41,7 @@ img{
 
 /***************Headlings*/
 h1,h2,h3,h4,h5,h6{
-    color: var(--primary-color);
+    color: var(--bg-primary-color);
 }
 
 h1{
@@ -88,7 +86,7 @@ p{
 
 a{
     text-decoration: none;
-    color: var(--white);
+    color: var(--bg-white-color);
 }
 
 /**************Nav*/
@@ -106,18 +104,18 @@ i{
 /***********/
 p{
     &::selection{
-        background: var(--secondary-color);
+        background: var(--bg-secondary-color);
 
     }
 }
 
 /************Caja contenedor */
 .light-dark{
-    color: var(--black-four);
+    color: var( --bg-black-color-four);
     font-weight: 100;
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 20px;    
     .switch{
         position: relative;
         display: inline-block;
@@ -141,7 +139,7 @@ p{
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: var(--white);
+        background-color: var(--bg-white-color);
         transition: .4s;
         border-radius: 34px;
         &:before{
@@ -151,7 +149,7 @@ p{
             width: 1rem;
             left: .2rem;
             bottom: .3rem;
-            background-color: var(--secondary-color);
+            background-color: var(--bg-secondary-color);
             transition: .4s;
             border-radius: 50px;
         }

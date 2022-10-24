@@ -1,10 +1,10 @@
 //COLORS
 
 $colors: (
-    primary: hsl(205, 100%, 50%),
+    primary: #0095ff,
     secondary: #d6720f,
     white: #ffffff,
-    white-one:#E1E1E1,
+    gray:#9c9c9c,
     black: #000,
     black-one:#181818,
     black-two: #1D1D1D,
@@ -13,14 +13,8 @@ $colors: (
 );
 
 :root{
-    --primary-color: #{map-get($colors , primary )};    
-    --secondary-color: #{map-get($colors , secondary )};    
-    --white: #{map-get($colors , white )};  
-    --black: #{map-get($colors , black )};  
-    --bg-black-one: #{map-get($colors, black-one)}; 
-    --bg-black-two: #{map-get($colors, black-two)}; 
-    --bg-black-three: #{map-get($colors, black-three)}; 
-    --bg-black-four: #{map-get($colors, black-four)}; 
-     
+    @each $key, $value in $colors{
+        --#{bg-+$key}-color:#{$value};
+    }     
 }
 
