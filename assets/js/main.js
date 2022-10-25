@@ -1,4 +1,31 @@
 const switchDarkLightMode = document.querySelector('#checkbox-dark-light');
+const btnOpenMenuMobile = document.querySelector('#icon-menu-mobile');
+const btnCloseMenuMobile = document.querySelector('#box-btn-close-menu');
+
+const btnHomeMenuMobile = document.querySelector('#btnHomeMenuMobile');
+const btnAboutMeMenuMobile = document.querySelector('#btnAboutMeMenuMobile');
+const btnPortfolioMenuMobile = document.querySelector('#btnPortfolioMenuMobile');
+const btnContactMenuMobile = document.querySelector('#btnContactMenuMobile');
+
+
+
+CloseMenu(btnCloseMenuMobile);
+CloseMenu(btnHomeMenuMobile);
+CloseMenu(btnAboutMeMenuMobile);
+CloseMenu(btnPortfolioMenuMobile);
+CloseMenu(btnContactMenuMobile);
+
+btnOpenMenuMobile.addEventListener('click' , ()=>{
+    document.querySelector('.menu-mobile').classList.add('active');
+});
+
+function CloseMenu(btn){
+    btn.addEventListener('click' , ()=>{
+        document.querySelector('.menu-mobile').classList.remove('active');
+    })
+}
+
+
 
 switchDarkLightMode.addEventListener('click', () =>{
 

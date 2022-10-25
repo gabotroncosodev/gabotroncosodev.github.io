@@ -9,12 +9,28 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet" >
     <script src="https://kit.fontawesome.com/d5c24c2a1e.js" crossorigin="anonymous"></script></head>
 <body>
     <header class="header" id="header">
-        <!-- <div class="menu-mobile">
-        </div> -->
+        <div class="mobile">
+            <div id="icon-menu-mobile">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="menu-mobile ">
+                <div class="box-btn-close-menu" id="box-btn-close-menu">
+                    <i class="fa-solid fa-xmark" i></i>
+                </div>
+               <nav class="nav-mobile">
+                <ul>
+                    <li id="btnHomeMenuMobile"><a href="#header"><i class="fa-solid fa-house"></i>Home</a></li>
+                    <li id="btnAboutMeMenuMobile"><a href="#about-me"><i class="fa-solid fa-user"></i> Sobre Mí</a></li>
+                    <li id="btnPortfolioMenuMobile"><a href="#portfolio"><i class="fa-sharp fa-solid fa-folder-open"></i> Portafolio</a></li>
+                    <li id="btnContactMenuMobile"><a href="#contact"> <i class="fa-sharp fa-solid fa-address-card"></i> Contacto</a></li>  
+                </ul>
+               </nav>
+            </div>
+        </div>
        <div class="cont-profile-header">
             <div class="profile-photo">
                 <img src="./assets/img/perfil.jpg" alt="profile photo">
@@ -41,7 +57,7 @@
             </label> 
        </div>
     </header>
-    <main>
+    <main id="main">
         <aside class="aside">
             <div class="aside-container">
                 <div class="profile-photo">
@@ -60,9 +76,6 @@
                         <li><a href="#contact"><i class="fa-sharp fa-solid fa-address-card"></i>Contacto</a> </li>
                     </ul>
                 </nav>
-                <!-- <div class="light-dark">
-                    <p>Dark/Light</p>                    
-               </div> -->
             </div>
 
         </aside>
