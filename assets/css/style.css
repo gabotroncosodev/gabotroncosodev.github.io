@@ -9,6 +9,8 @@
   --bg-black-two-color:#1D1D1D;
   --bg-black-three-color:#292929;
   --bg-black-four-color:#404040;
+  --bg-black-alpha-80-color:rgba(0, 0, 0, 0.9490196078);
+  --bg-white-alpha-80-color:rgba(255, 255, 255, 0.8);
 }
 
 * {
@@ -186,7 +188,7 @@ header {
 header .cont-profile-header {
   display: flex;
 }
-@media (max-width: 700px) {
+@media (max-width: 500px) {
   header .cont-profile-header {
     display: block;
   }
@@ -194,7 +196,7 @@ header .cont-profile-header {
 header .cont-profile-header .profile-photo {
   margin-right: 2rem;
 }
-@media (max-width: 700px) {
+@media (max-width: 500px) {
   header .cont-profile-header .profile-photo {
     margin-right: 0;
   }
@@ -303,7 +305,7 @@ header .light-dark {
   display: none;
   z-index: 100;
   position: fixed;
-  background-color: rgb(20, 20, 20);
+  background-color: var(--bg-black-one-color);
   width: 100vw;
   height: 100vh;
   top: 0;
@@ -561,8 +563,8 @@ section {
   object-fit: cover;
 }
 #portfolio .grid-portfolio figure figcaption {
-  background-color: rgba(0, 0, 0, 0.8784313725);
-  color: #fff;
+  background-color: var(--bg-black-alpha-80-color);
+  color: var(--bg-white-alpha-80-color);
   grid-column: 1/2;
   grid-row: 1/2;
   z-index: 1;
@@ -588,7 +590,7 @@ section {
   }
 }
 #portfolio .grid-portfolio figure figcaption a {
-  color: #fff;
+  color: var(--bg-white-alpha-80-color);
   font-size: 1.4rem;
   margin-top: 1rem;
   border-left: 0.5rem solid var(--bg-secondary-color);
@@ -597,6 +599,7 @@ section {
 }
 #portfolio .grid-portfolio figure figcaption a:hover {
   background-color: var(--bg-secondary-color);
+  color: #fff;
 }
 
 /*********************CONTACTO***/
@@ -631,8 +634,9 @@ section {
     padding-right: 1;
   }
 }
-@media (max-width: 820px) {
+@media (max-width: 700px) {
   #contact .grid-contact .box-contact .logo-info-contact {
+    padding-right: 0;
     margin-bottom: 1.5rem;
   }
 }

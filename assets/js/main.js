@@ -45,6 +45,8 @@ switchDarkLightMode.addEventListener('click', () =>{
         document.documentElement.style.setProperty('--bg-black-two-color', '#ebebeb');
         document.documentElement.style.setProperty('--bg-black-three-color', '#d2d2d2');
         document.documentElement.style.setProperty('--bg-black-four-color', '#b0b0b0');
+        document.documentElement.style.setProperty('--bg-black-alpha-80-color', '#ffffffcc');
+        document.documentElement.style.setProperty('--bg-white-alpha-80-color', '#000000cc');
     }else{        
         /**Black */
         document.documentElement.style.setProperty('--bg-primary-color', '#0095ff');
@@ -56,6 +58,8 @@ switchDarkLightMode.addEventListener('click', () =>{
         document.documentElement.style.setProperty('--bg-black-two-color', '#1D1D1D');
         document.documentElement.style.setProperty('--bg-black-three-color', '#292929');
         document.documentElement.style.setProperty('--bg-black-four-color', '#404040');
+        document.documentElement.style.setProperty('--bg-black-alpha-80-color', '#000000cc');
+        document.documentElement.style.setProperty('--bg-white-alpha-80-color', '#ffffffcc');
     }
 });
 

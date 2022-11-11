@@ -6,6 +6,11 @@
     }
 }
 @mixin mq500 {
+    @media (max-width : 500px) {
+        @content;
+    }
+}
+@mixin mq700 {
     @media (max-width : 700px) {
         @content;
     }

@@ -23,12 +23,12 @@ section{
     background-color: var(--bg-black-three-color);
     p{
         margin-bottom: 2rem;
-        @include mixins.mq500{  
+        @include mixins.mq700{  
             font-size: 1rem;
         }        
         &:nth-child(2){
             margin-bottom: 1rem; 
-            @include mixins.mq500{  
+            @include mixins.mq700{  
                 font-size: 1.2rem;
             }         
         }
@@ -113,8 +113,8 @@ section{
                 object-fit: cover;
             }
             figcaption {
-                background-color: #000000e0;
-                color: #fff;
+                background-color: var(--bg-black-alpha-80-color);
+                color: var(--bg-white-alpha-80-color);
                 grid-column: 1/2;
                 grid-row: 1/2;
                 z-index: 1; 
@@ -135,7 +135,7 @@ section{
                     }
                 }
                 a{      
-                    color: #fff;        
+                    color: var(--bg-white-alpha-80-color);        
                     font-size: 1.4rem;
                     margin-top: 1rem;
                     border-left: .5rem solid var(--bg-secondary-color);
@@ -143,6 +143,7 @@ section{
                     transition: .2s;
                     &:hover{
                         background-color: var(--bg-secondary-color);
+                        color: #fff;
                     }
                 }
             }
@@ -163,7 +164,7 @@ section{
             @include mixins.mq1200{
                 padding: 1rem;
             } 
-            @include mixins.mq500{
+            @include mixins.mq700{
                 display: block;
                 background-color: var(--bg-black-two-color);
                 margin-bottom: 1rem;
@@ -177,9 +178,10 @@ section{
                 @include mixins.mq1200{
                     padding-right: 1; 
                 }  
-                @include mixins.mq820{
+                @include mixins.mq700{
+                    padding-right: 0; 
                     margin-bottom: 1.5rem;
-                }                  
+                }              
                 svg{                
                     height: 100%;
                     path{
@@ -193,7 +195,7 @@ section{
                 } 
                 h4{
                     margin: 0;
-                    @include mixins.mq500{
+                    @include mixins.mq700{
                         margin: 0 auto;
                         color: var(--bg-white-color);
                     }

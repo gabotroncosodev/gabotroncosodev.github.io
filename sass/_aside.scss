@@ -7,7 +7,7 @@
     
     align-items: center;
     background-color:var(--bg-black-one-color);
-    @include mixins.mq500{
+    @include mixins.mq700{
         display: none;    
     }
     .aside-container{        

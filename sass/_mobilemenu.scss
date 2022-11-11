@@ -3,7 +3,7 @@
 .mobile{
     position: relative;
     display: none;
-    @include mixins.mq500{
+    @include mixins.mq700{
         display: block;
         opacity: 1;
 
@@ -26,7 +26,7 @@
         display: none;
         z-index: 100;
         position: fixed;
-        background-color: rgb(20, 20, 20);
+        background-color: var(--bg-black-one-color);
         width: 100vw;
         height: 100vh;
         top: 0;

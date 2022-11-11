@@ -5,7 +5,7 @@ header{
     place-content: center;
     width: 100%;
     min-height: 100vh; 
-    @include mixins.mq500{  
+    @include mixins.mq700{  
         padding:1rem ;
         place-content: 0;
     }
@@ -41,7 +41,7 @@ header{
                     font-weight: 800;
                     font-size: 1.8rem;                    
                 }
-                @include mixins.mq500{  
+                @include mixins.mq700{  
                     font-size: 1.2rem;
                     &::first-line{
                         font-size: 1.2rem;
@@ -87,7 +87,7 @@ header{
         display: flex;
         justify-content: center;
         padding-bottom: 1rem;
-        @include mixins.mq500{  
+        @include mixins.mq700{  
             justify-content: center;
         }
     }
