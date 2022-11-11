@@ -42,7 +42,6 @@ section{
             display: grid;
             align-items: center;
             justify-items: center;
-            cursor: pointer;
             background-color: var(--bg-black-three-color);
             transition: .2s ease-in;
             &:hover, &:checked{
@@ -121,6 +120,9 @@ section{
 
                 clip-path: circle(0 at top left) ;
                 transition: clip-path .5s;
+                .cont-texto-portf{
+                    line-height: .1rem;
+                }
 
                 @include mixins.flexCenter;
                 flex-direction: column;
@@ -130,9 +132,9 @@ section{
                 }
                 @include mixins.mq820{
                     padding:1rem;
-                    p{
-                        font-size:1rem;
-                    }
+                    // p{
+                    //     font-size:1rem;                        
+                    // }
                 }
                 a{      
                     color: var(--bg-white-alpha-80-color);        

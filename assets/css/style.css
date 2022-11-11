@@ -440,11 +440,6 @@ main {
   padding: 0.8rem 0.5rem;
   display: block;
 }
-@media (max-width: 1400px) {
-  .aside .aside-container .navbar-aside ul li a {
-    padding: 0.5rem 0.5rem;
-  }
-}
 .aside .aside-container .navbar-aside ul li a:hover {
   background-color: var(--bg-secondary-color);
 }
@@ -500,7 +495,6 @@ section {
   display: grid;
   align-items: center;
   justify-items: center;
-  cursor: pointer;
   background-color: var(--bg-black-three-color);
   transition: 0.2s ease-in;
 }
@@ -576,6 +570,9 @@ section {
   flex-direction: column;
   padding: 2rem;
 }
+#portfolio .grid-portfolio figure figcaption .cont-texto-portf {
+  line-height: 0.1rem;
+}
 @media (max-width: 820px) {
   #portfolio .grid-portfolio figure figcaption {
     padding: 3rem;
@@ -584,9 +581,6 @@ section {
 @media (max-width: 820px) {
   #portfolio .grid-portfolio figure figcaption {
     padding: 1rem;
-  }
-  #portfolio .grid-portfolio figure figcaption p {
-    font-size: 1rem;
   }
 }
 #portfolio .grid-portfolio figure figcaption a {
